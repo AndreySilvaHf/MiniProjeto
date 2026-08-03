@@ -1,0 +1,25 @@
+import promptSync from "prompt-sync";
+import { dadosLivros } from "./dadosLivros.js";
+
+const prompt = promptSync();
+
+function cadastrarLivro() {
+  const titulo = prompt("Digite o título do livro: ").toUpperCase();
+  const autor = prompt("Digite o autor: ");
+  const categoria = prompt("Digite a categoria: ");
+  const paginas = Number(prompt("Digite o número de páginas: "));
+
+  const novoLivro = {
+    titulo,
+    autor,
+    categoria,
+    paginas,
+    disponivel: true
+  };
+
+  dadosLivros.push(novoLivro);
+
+  console.log("Livro cadastrado com sucesso!");
+}
+
+export default cadastrarLivro;

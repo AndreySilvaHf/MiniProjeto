@@ -71,5 +71,3 @@ biblioteca-js/
 
 
 Cada funcionalidade foi separada em um módulo para facilitar a organização, manutenção e reutilização do código.
-
-

@@ -2,6 +2,7 @@ import promptSync from "prompt-sync";
 import listarLivros from "./listarLivros.js";
 import { buscarLivro } from "./buscarLivro.js";
 import cadastrarLivro from "./cadastrarLivro.js";
+import exibirEstatisticas from "./exibirEstatisticas.js";
 
 const prompt = promptSync();
 
@@ -57,7 +58,7 @@ do {
         break;
 
     case 7:
-        console.log("Função ainda não implementada.");
+        exibirEstatisticas();
         prompt("\nPressione ENTER para voltar ao menu...");
         break;
 

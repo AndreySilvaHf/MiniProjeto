@@ -3,6 +3,7 @@ import listarLivros from "./listarLivros.js";
 import { buscarLivro } from "./buscarLivro.js";
 import cadastrarLivro from "./cadastrarLivro.js";
 import exibirEstatisticas from "./exibirEstatisticas.js";
+import { realizarEmprestimo } from "./realizarEmprestimo.js"
 
 const prompt = promptSync();
 
@@ -47,10 +48,12 @@ do {
         prompt("\nPressione ENTER para voltar ao menu...");
         break;
 
-    case 5:
-        console.log("Função ainda não implementada.");
+    case 5: {
+        const titulo = prompt("Digite o título do livro para empréstimo: ");
+        realizarEmprestimo(titulo);
         prompt("\nPressione ENTER para voltar ao menu...");
         break;
+}
 
     case 6:
         console.log("Função ainda não implementada.");

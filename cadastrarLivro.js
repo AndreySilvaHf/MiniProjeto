@@ -1,5 +1,6 @@
 import promptSync from "prompt-sync";
 import { dadosLivros } from "./dadosLivros.js";
+import Livro from "./Livro.js";
 
 const prompt = promptSync();
 
@@ -9,13 +10,13 @@ function cadastrarLivro() {
   const categoria = prompt("Digite a categoria: ");
   const paginas = Number(prompt("Digite o número de páginas: "));
 
-  const novoLivro = {
-    titulo,
-    autor,
-    categoria,
-    paginas,
-    disponivel: true
-  };
+ const novoLivro = new Livro(
+  titulo,
+  autor,
+  categoria,
+  paginas,
+  true
+);
 
   dadosLivros.push(novoLivro);
 
